@@ -21,3 +21,12 @@ def two_oldest_ages(ages):
     # you may find it helpful to research the `sorted(iter)` function, which
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
+
+      # Remove duplicates by converting the list to a set
+    distinct_ages = list(set(ages))
+    
+    # Sort the distinct ages
+    distinct_ages.sort()
+    
+    # Return the two oldest ages as a tuple
+    return (distinct_ages[-2], distinct_ages[-1])

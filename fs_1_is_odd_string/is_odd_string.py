@@ -29,3 +29,9 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+     # Calculate the sum of the positions
+    total = sum((ord(char.lower()) - ord('a') + 1) for char in word)
+    
+    # Return True if the sum is odd, otherwise False
+    return total % 2 == 1
